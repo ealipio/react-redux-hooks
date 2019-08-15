@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-import * as actionTypes from './actions/actionTypes';
+import * as actionTypes from '../actions/actionTypes';
 import './App.css';
 
 const App = () => {
@@ -16,8 +16,7 @@ const App = () => {
         Age UP
       </button>
       <button
-        onClick={() => dispatch({ type: actionTypes.AGE_DOWN, value: 1 })}
-      >
+        onClick={() => dispatch({ type: actionTypes.AGE_DOWN, value: 1 })}>
         Age Down
       </button>
     </div>
