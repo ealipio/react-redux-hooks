@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { useSelector, useDispatch } from 'react-redux';
 
 import * as actionTypes from './actions/actionTypes';
@@ -13,32 +12,16 @@ const App = () => {
       <div className="Age-label">
         your age: <span>{age}</span>
       </div>
-      <button onClick={() => dispatch({ type: actionTypes.AGE_UP })}>
+      <button onClick={() => dispatch({ type: actionTypes.AGE_UP, value: 1 })}>
         Age UP
       </button>
-      <button onClick={() => dispatch({ type: actionTypes.AGE_DOWN })}>
+      <button
+        onClick={() => dispatch({ type: actionTypes.AGE_DOWN, value: 1 })}
+      >
         Age Down
       </button>
     </div>
   );
 };
-
-// const mapStateToProps = state => {
-//   return {
-//     age: state.lordReducer.age
-//   };
-// };
-
-// const mapDispachToProps = dispatch => {
-//   return {
-//     onAgeUp: () => dispatch({ type: actionTypes.AGE_UP, value: 1 }),
-//     onAgeDown: () => dispatch({ type: actionTypes.AGE_DOWN, value: 1 })
-//   };
-// };
-
-// export default connect(
-//   mapStateToProps,
-//   mapDispachToProps
-// )(App);
 
 export default App;
