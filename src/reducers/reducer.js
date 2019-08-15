@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
 
 const initialState = {
-  age: 20
+  age: 15
 };
 
 const ageReducer = (state = initialState, action) => {
